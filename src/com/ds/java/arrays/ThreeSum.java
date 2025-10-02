@@ -11,13 +11,17 @@ public class ThreeSum {
         List<List<Integer>> sol = new ArrayList<>();
         int len = arr.length;
         Arrays.sort(arr);
-        for(int i=0;i<len;i++) {
+        for(int i=0;i<len-1;i++) {
+
+            if(i>0 && arr[i] == arr[i-1])
+                continue;
 
             int j = i+1;
             int k = len-1;
 
-            int sum = arr[i] + arr[j] + arr[k];
+
             while(j<k) {
+                int sum = arr[i] + arr[j] + arr[k];
                 if (sum > 0)
                     k--;
                 else if (sum < 0) {
@@ -32,5 +36,12 @@ public class ThreeSum {
         }
 
         return sol;
+    }
+
+    public static void main(String[] args) {
+
+        int[] arr = {-4,-1,-1,0,1,2};
+
+        System.out.println(new ThreeSum().Solution(arr));
     }
 }
