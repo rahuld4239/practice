@@ -20,8 +20,8 @@ public class CourseSchedule {
         }
 
         for(int i = 0; i<numCourses; i++) {
-            List visiting = new ArrayList<>();
-            List visited = new ArrayList<>();
+            List<Integer> visiting = new ArrayList<>();
+            List<Integer> visited = new ArrayList<>();
             if(!dfs(i, preMap, visiting, visited))
                 return false;
         }

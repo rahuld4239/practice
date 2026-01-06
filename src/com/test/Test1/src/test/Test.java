@@ -9,6 +9,6 @@ public class Test {
 
         List<Employee> empList = new ArrayList<>();
 
-        empList.stream().filter(e -> e.getAge() > 30).
+        //empList.stream().filter(e -> e.getAge() > 30).
     }
 }
